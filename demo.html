@@ -1,0 +1,869 @@
+<?php
+include 'db.php';
+$result=$conn->query("select * from menu");
+?>
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Food Court | Home</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <!-- <style>
+            body {
+            min-height: 100vh;
+            background: linear-gradient(
+                120deg,
+                rgb(228, 171, 171),
+                rgb(217, 150, 161),
+                rgb(236, 119, 236),
+                rgb(109, 218, 225),
+                rgb(255, 52, 255)
+            );
+            background-size: 400% 400%;
+            animation: gd 10s ease infinite;
+            }
+
+            @keyframes gd {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+            }
+        </style> -->
+    </head>
+
+    <body>
+        <header>
+            <!-- place navbar here -->
+            <nav
+                class="navbar navbar-expand-sm navbar-light bg-primary"
+            >
+                <div class="container">
+                    <h5>Hello <?= $_SESSION["uname"] ?></h5>
+                    <a class="navbar-brand d-flex align-items-center" href="home.php">
+                        <img
+                            src="https://www.shutterstock.com/image-vector/festivasl-food-court-hall-logo-260nw-2233823755.jpg"
+                            class="img-fluid rounded-circle"
+                            height="80"   
+                            width="80"
+                            alt="Food Court"
+                        />
+                    </a>
+                    
+                    <button
+                        class="navbar-toggler d-lg-none"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapsibleNavId"
+                        aria-controls="collapsibleNavId"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="collapsibleNavId">
+                        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="home.php" aria-current="page"
+                                    >Home
+                                    <span class="visually-hidden">(current)</span></a
+                                >
+                            </li>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="admin.php">Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="menu.php">product</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="fooddetail.php">Product Detail</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="gallery.php">Gallery/Blogs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact Us</a>
+                            </li>
+                            
+                        </ul>
+                        <form class="d-flex my-2 my-lg-0">
+                            <a
+                                name=""
+                                id=""
+                                class="btn btn-primary"
+                                href="logout.php"
+                                role="button"
+                                >Logout</a
+                            >
+                        </form>
+                    </div>
+                </div>
+            </nav>
+             
+        </header>     
+
+        <main>
+            <marquee>🎉🧿Welcome to Our Online Food Court Platform🧿🎉</marquee>
+
+            <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li
+                        data-bs-target="#carouselId"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="First slide"
+                    ></li>
+                    <li
+                        data-bs-target="#carouselId"
+                        data-bs-slide-to="1"
+                        aria-label="Second slide"
+                    ></li>
+                    <li
+                        data-bs-target="#carouselId"
+                        data-bs-slide-to="2"
+                        aria-label="Third slide"
+                    ></li>
+                    <li
+                        data-bs-target="#carouselId"
+                        data-bs-slide-to="3"
+                        aria-label="Fourth slide"
+                    ></li>
+                    <li
+                        data-bs-target="#carouselId"
+                        data-bs-slide-to="4"
+                        aria-label="Fifth slide"
+                    ></li>
+                    <li
+                        data-bs-target="#carouselId"
+                        data-bs-slide-to="5"
+                        aria-label="sixth slide"
+                    ></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <img
+                            src="https://img.freepik.com/free-psd/web-banner-template-japanese-restaurant_23-2148203258.jpg?semt=ais_hybrid&w=740&q=80"
+                            class="w-100"
+                            height="500px"
+                            width="auto"
+                            alt="First slide"
+                        />
+                        <div class="carousel-caption">
+                            <h3>Punjabi Dhaba</h3>
+                            <p>✨Unlimited @ Order upto ₹4000/-</p>
+                            <a
+                                name=""
+                                id=""
+                                class="btn btn-primary"
+                                href="product.html"
+                                role="button"
+                                >Check Out</a
+                            >
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img
+                            src="https://img.freepik.com/free-psd/food-menu-restaurant-web-banner-template_106176-1452.jpg"
+                            class="w-100"
+                            height="500px"
+                            width="auto"
+                            alt="Second slide"
+                        />
+                        <div class="carousel-caption text-primary">
+                            <h3>Momos Express</h3>
+                            <p>🎉Discount up to 50%</p>
+                            <a
+                                name=""
+                                id=""
+                                class="btn btn-primary"
+                                href="product.html"
+                                role="button"
+                                >Check Out</a
+                            >
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img
+                            src="https://img.freepik.com/free-psd/flat-design-food-template_23-2150063838.jpg?semt=ais_hybrid&w=740&q=80"
+                            class="w-100"
+                            height="500px"
+                            width="auto"
+                            alt="Third slide"
+                        />
+                        <div class="carousel-caption text-dark">
+                            <h3>Burger Hub</h3>
+                            <p>🎊Discount upto 70%</p>
+                            <a
+                                name=""
+                                id=""
+                                class="btn btn-primary"
+                                href="product.html"
+                                role="button"
+                                >Check Out</a
+                            >
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img
+                            src="https://img.freepik.com/free-vector/flat-design-american-food-twitter-header_23-2149155490.jpg?semt=ais_hybrid&w=740&q=80"
+                            class="w-100"
+                            height="500px"
+                            width="auto"
+                            alt="Fourth slide"
+                        />
+                        <div class="carousel-caption text-primary">
+                            <h3>Street Food Junction</h3>
+                            <p>Get upto 25% 🎉Discount</p>
+                            <a
+                                name=""
+                                id=""
+                                class="btn btn-primary"
+                                href="product.html"
+                                role="button"
+                                >Check Out</a
+                            >
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img
+                            src="https://img.freepik.com/free-vector/flat-design-indian-restaurant-facebook-cover_23-2149447258.jpg?semt=ais_hybrid&w=740&q=80"
+                            class="w-100"
+                            height="500px"
+                            width="auto"
+                            alt="Fifth slide"
+                        />
+                        <div class="carousel-caption text-danger">
+                            <h3>South Indian Treats</h3>
+                            <p>🎁 Surprise Gifts on Every Order</p>
+                            <a
+                                name=""
+                                id=""
+                                class="btn btn-primary"
+                                href="product.html"
+                                role="button"
+                                >Check Out</a
+                            >
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img
+                            src="https://img.freepik.com/free-psd/delicious-food-restaurant-facebook-template_23-2150291425.jpg?semt=ais_hybrid&w=740&q=80"
+                            class="w-100"
+                            height="500px"
+                            width="auto"
+                            alt="Sixth slide"
+                        />
+                        <div class="carousel-caption text-danger">
+                            <h3>Street Food Junction</h3>
+                            <p>🎆Buy 1 Get 1 Free</p>
+                            <a
+                                name=""
+                                id=""
+                                class="btn btn-primary"
+                                href="product.html"
+                                role="button"
+                                >Check Out</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselId"
+                    data-bs-slide="prev"
+                >
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselId"
+                    data-bs-slide="next"
+                >
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            
+            <div class="container bg-info my-3">
+                <div class="row">
+                    <div
+                        class="col-6 text-center"
+                    >
+                        <h3>Menu Card</h3>
+                    </div>
+                    <div
+                        class="col text-center"
+                    >
+                        <!-- <a
+                            name=""
+                            id=""
+                            class="btn btn-primary"
+                            href="admin.php"
+                            role="button"
+                            >Insert Items</a
+                        > -->
+                        <a
+                        name=""
+                        id=""
+                        class="btn btn-primary"
+                        href="excel.php"
+                        role="button"
+                        >Generate Excel</a
+                        >
+                        <a
+                            name=""
+                            id=""
+                            class="btn btn-primary"
+                            href="pdf.php"
+                            role="button"
+                            >Generate pdf</a
+                        > 
+                    </div>       
+                </div>
+            </div>
+            
+            <div
+                class="container"
+            >
+                <div
+                    class="row justify-content-center align-items-center g-3 m-4"
+                >
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                            <img class="card-img-top" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" height="350" width="200" alt="Title"/>
+                            <div class="card-body">
+                                <h4 class="card-title">Margherita Pizza</h4>
+                                <p class="card-text">Pizza Corner</p>
+                                <h6 class="card-text">price: ₹ 200</h6>
+                                <a
+                                    name=""
+                                    id=""
+                                    class="btn btn-primary"
+                                    href="product.htmml"
+                                    role="button"
+                                    >Details</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                            <img class="card-img-top" src="https://images.unsplash.com/photo-1550547660-d9450f859349" height="350" width="200" alt="Title" />
+                            <div class="card-body">
+                                <h4 class="card-title">Veg Burger</h4>
+                                <p class="card-text">Burger Hub</p>
+                                <h6 class="card-text">price: ₹ 120</h6>
+                                <a
+                                    name=""
+                                    id=""
+                                    class="btn btn-primary"
+                                    href="#"
+                                    role="button"
+                                    >Details</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                            <img class="card-img-top" src="https://images.unsplash.com/photo-1594007654729-407eedc4be65" height="350" width="200" alt="Title" />
+                            <div class="card-body">
+                                <h4 class="card-title">Paneer Pizza</h4>
+                                <p class="card-text">Pizza Corner</p>
+                                <h6 class="card-text">price: ₹ 250</h6>
+                                <a
+                                    name=""
+                                    id=""
+                                    class="btn btn-primary"
+                                    href="product.html"
+                                    role="button"
+                                    >Details</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                            <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeNPCfeAMSxY93MVGV-7-AicFxf3KAuUobhw&s" height="350" width="200" alt="Title" />
+                            <div class="card-body">
+                                <h4 class="card-title">Veg Momos</h4>
+                                <p class="card-text">Momos Express</p>
+                                <h6 class="card-text">price: ₹ 100</h6>
+                                <a
+                                    name=""
+                                    id=""
+                                    class="btn btn-primary"
+                                    href="product.html"
+                                    role="button"
+                                    >Details</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                            <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJLkdmNl2vyxV9YYnT9VoxnH_1XU_6IuSjdw&s" height="350" width="200" alt="Title" />
+                            <div class="card-body">
+                                <h4 class="card-title">Masala Dosa</h4>
+                                <p class="card-text">South Indian Treats</p>
+                                <h6 class="card-text">price: ₹ 120</h6>
+                                <a
+                                    name=""
+                                    id=""
+                                    class="btn btn-primary"
+                                    href="product.html"
+                                    role="button"
+                                    >Details</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                            <img class="card-img-top" src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc" height="350" width="200" alt="Title" />
+                            <div class="card-body">
+                                <h4 class="card-title">Idli Sambar</h4>
+                                <p class="card-text">South Indian Treats</p>
+                                <h6 class="card-text">price: ₹ 90</h6>
+                                <a
+                                    name=""
+                                    id=""
+                                    class="btn btn-primary"
+                                    href="product.html"
+                                    role="button"
+                                    >Details</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                            <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeYxy-qS_FMkDnRZDwDf-kF66TyPlGxh2u9w&s" height="350" width="200" alt="Title" />
+                            <div class="card-body">
+                                <h4 class="card-title">Paneer Butter Masala</h4>
+                                <p class="card-text">Punjabi Dhaba</p>
+                                <h6 class="card-text">price: ₹ 220</h6>
+                                <a
+                                    name=""
+                                    id=""
+                                    class="btn btn-primary"
+                                    href="product.html"
+                                    role="button"
+                                    >Details</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                            <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfddl1dmd6cTCY3p4PSyI8COqr-QFdPzHFTg&s" height="350" width="200" alt="Title" />
+                            <div class="card-body">
+                                <h4 class="card-title">Butter Naan</h4>
+                                <p class="card-text">Punjabi Dhaba</p>
+                                <h6 class="card-text">price: ₹ 40</h6>
+                                <a
+                                    name=""
+                                    id=""
+                                    class="btn btn-primary"
+                                    href="product.html"
+                                    role="button"
+                                    >Details</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- Feature -->   
+
+            <!-- Feature Caresouls -->
+            <div class="container my-5">
+                <h3 class="text-center mb-4 text-danger fw-bold">Our Food Court Outlets</h3>
+
+                <div id="outletCarousel" class="carousel slide" data-bs-ride="carousel">
+
+                    <!-- Indicators -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#outletCarousel" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#outletCarousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#outletCarousel" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#outletCarousel" data-bs-slide-to="3"></button>
+                        <button type="button" data-bs-target="#outletCarousel" data-bs-slide-to="4"></button>
+                        <button type="button" data-bs-target="#outletCarousel" data-bs-slide-to="5"></button>
+                        <button type="button" data-bs-target="#outletCarousel" data-bs-slide-to="6"></button>
+                        <button type="button" data-bs-target="#outletCarousel" data-bs-slide-to="7"></button>
+                        <button type="button" data-bs-target="#outletCarousel" data-bs-slide-to="8"></button>
+                        <button type="button" data-bs-target="#outletCarousel" data-bs-slide-to="9"></button>
+                        <button type="button" data-bs-target="#outletCarousel" data-bs-slide-to="10"></button>
+                        <button type="button" data-bs-target="#outletCarousel" data-bs-slide-to="11"></button>
+                        <button type="button" data-bs-target="#outletCarousel" data-bs-slide-to="12"></button>
+                        <button type="button" data-bs-target="#outletCarousel" data-bs-slide-to="13"></button>
+                        <button type="button" data-bs-target="#outletCarousel" data-bs-slide-to="14"></button>
+                        <button type="button" data-bs-target="#outletCarousel" data-bs-slide-to="15"></button>
+                        <button type="button" data-bs-target="#outletCarousel" data-bs-slide-to="16"></button>
+                    </div>
+
+                    <!-- Carousel Items -->
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <img src="https://images.unsplash.com/photo-1520073201527-6b044ba2ca9f?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8VmVnJTIwQnVyZ2VyfGVufDB8fDB8fHww"
+                                class="d-block w-100" alt="RITESH" style="height: 70vh; object-fit: cover;">
+                            <div class="carousel-caption">
+                                <h5>Burger Hub</h5>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1573821663912-6df460f9c684?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bWFyZ2hlcml0YS1waXp6YXxlbnwwfHwwfHx8MA%3D%3D"
+                                class="d-block w-100" alt="RITESH" style="height: 70vh; object-fit: cover;">
+                            <div class="carousel-caption">
+                                <h5>Pizza Corner</h5>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1672717973894-40efe25310db?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cGFuZWVyLXBpenphfGVufDB8fDB8fHww"
+                                class="d-block w-100" alt="RITESH" style="height: 70vh; object-fit: cover;">
+                            <div class="carousel-caption">
+                                <h5>Pizza Corner</h5>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="https://media.istockphoto.com/id/2210416133/photo/delicious-veg-momos-and-noodles-served-in-rustic-style.webp?a=1&b=1&s=612x612&w=0&k=20&c=HDEBaukgzTDDWra8OqNE4xUMrohaKJ_u1i7WqMatyxE="
+                                class="d-block w-100" alt="RITESH" style="height: 70vh; object-fit: cover;">
+                            <div class="carousel-caption">
+                                <h5>Momos Express</h5>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1694849789325-914b71ab4075?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWFzYWxhLWRvc2F8ZW58MHx8MHx8fDA%3D"
+                                class="d-block w-100" alt="RITESH" style="height: 70vh; object-fit: cover;">
+                            <div class="carousel-caption">
+                                <h5>South Indian Treats</h5>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1630383249896-424e482df921?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aWRsaS1zYW1iYXJ8ZW58MHx8MHx8fDA%3D"
+                                class="d-block w-100" alt="RITESH" style="height: 70vh; object-fit: cover;">
+                            <div class="carousel-caption">
+                                <h5>South Indian Treats</h5>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1701579231378-3726490a407b?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGFuZWVyLWJ1dHRlci1tYXNhbGF8ZW58MHx8MHx8fDA%3D"
+                                class="d-block w-100" alt="RITESH" style="height: 70vh; object-fit: cover;">
+                            <div class="carousel-caption">
+                                <h5>Punjabi Dhaba</h5>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="https://media.istockphoto.com/id/1140752821/photo/indian-naan-bread-with-garlic-butter-on-wooden-table.webp?a=1&b=1&s=612x612&w=0&k=20&c=lOeYboRNvwONnykKUu7lN-UQg5c0cl0CKfDFiVFfhBk="
+                                class="d-block w-100" alt="RITESH" style="height: 70vh; object-fit: cover;">
+                            <div class="carousel-caption">
+                                <h5>Punjabi Dhaba</h5>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1664717698774-84f62382613b?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dmVnLWZyaWVkLXJpY2V8ZW58MHx8MHx8fDA%3D"
+                                class="d-block w-100" alt="RITESH" style="height: 70vh; object-fit: cover;">
+                            <div class="carousel-caption">
+                                <h5>Chinese Wok</h5>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1630409346824-4f0e7b080087?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dmVnJTIwYmlyeWFuaXxlbnwwfHwwfHx8MA%3D%3D"
+                                class="d-block w-100" alt="RITESH" style="height: 70vh; object-fit: cover;">
+                            <div class="carousel-caption">
+                                <h5>Biryani House</h5>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1753357303396-704b5abe8945?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGF2LWJoYWppfGVufDB8fDB8fHww"
+                                class="d-block w-100" alt="RITESH" style="height: 70vh; object-fit: cover;">
+                            <div class="carousel-caption">
+                                <h5>Street Food Junction</h5>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1750767396956-da1796f33ad1?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dmFkYS1wYXZ8ZW58MHx8MHx8fDA%3D"
+                                class="d-block w-100" alt="RITESH" style="height: 70vh; object-fit: cover;">
+                            <div class="carousel-caption">
+                                <h5>Street Food Junction</h5>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1623659945014-d166115a8e20?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2hvY29sYXRlLWJyb3duaWV8ZW58MHx8MHx8fDA%3D"
+                                class="d-block w-100" alt="RITESH" style="height: 70vh; object-fit: cover;">
+                            <div class="carousel-caption">
+                                <h5>Dessert Delight</h5>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1657225953401-5f95007fc8e0?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aWNlLWNyZWFtLXN1bmRhZXxlbnwwfHwwfHx8MA%3D%3D"
+                                class="d-block w-100" alt="RITESH" style="height: 70vh; object-fit: cover;">
+                            <div class="carousel-caption">
+                                <h5>Dessert Delight</h5>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="https://plus.unsplash.com/premium_photo-1670445287762-372300cdcb77?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FwcHVjY2lub3xlbnwwfHwwfHx8MA%3D%3D"
+                                class="d-block w-100" alt="RITESH" style="height: 70vh; object-fit: cover;">
+                            <div class="carousel-caption">
+                                <h5>Café Bliss</h5>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1643974148654-305f7c8cd76c?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGNvbGQtY29mZmVlfGVufDB8fDB8fHww"
+                                class="d-block w-100" alt="RITESH" style="height: 70vh; object-fit: cover;">
+                            <div class="carousel-caption">
+                                <h5>Café Bliss</h5>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#outletCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#outletCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+
+                </div>
+            </div>
+
+
+            <!-- Feature query -->
+            <div
+                class="container bg-info text-center"
+            >
+                <h2>Feedback Form</h2>
+            </div>
+            
+            <div
+                class="container mb-4"
+            >
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-lg-5 col-xl-4"><img src="img\callback.png" alt="..." />
+                        <h5 class="text-danger">REQUEST A CALLBACK</h5>
+                        <h2>We will contact in the shortest time.</h2>
+                        <p class="text-muted">Monday to Friday, 9am-5pm.</p>
+                    </div>
+                    <div class="col-md-6 col-lg-5 col-xl-4">
+                        <form class="row" action="home.html">
+                            <div class="mb-3">
+                            <label class="form-label visually-hidden" for="inputName">Name</label>
+                            <input class="form-control form-quriar-control" id="inputName" type="text" placeholder="Name" />
+                            </div>
+                            <div class="mb-3">
+                            <label class="form-label visually-hidden" for="inputEmail">Another label</label>
+                            <input class="form-control form-quriar-control" id="inputEmail" type="email" placeholder="Email" />
+                            </div>
+                            <div class="mb-5">
+                            <label class="form-label visually-hidden" for="validationTextarea">Message</label>
+                            <textarea class="form-control form-quriar-control is-invalid border-1" id="validationTextarea" placeholder="Message" style="height: 150px" required="required"></textarea>
+                            </div>
+                            <div class="d-grid">
+                            <button class="btn btn-primary" type="submit">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Newsletter Section -->
+            <div class="container-fluid bg-dark py-5">
+                <div class="container">
+                    <div class="row align-items-center text-center text-lg-start">
+                        
+                        <div class="col-lg-4 mb-4 mb-lg-0">
+                            <h3 class="fw-bold text-white">Get an update every week</h3>
+                            <p class="text-warning mb-0">
+                                We ensure that your food is delivered in the best quality,<br>
+                                at the right time.
+                            </p>
+                        </div>
+
+                        <div class="col-lg-8">
+                            <h5 class="text-info mb-3">SUBSCRIBE TO NEWSLETTER</h5>
+                            <form class="row g-2 justify-content-center justify-content-lg-start">
+                                
+                                <div class="col-12 col-sm-8">
+                                    <input 
+                                        type="email" 
+                                        class="form-control" 
+                                        placeholder="Enter your email" 
+                                        required
+                                    >
+                                </div>
+
+                                <div class="col-12 col-sm-auto">
+                                    <button class="btn btn-danger w-100" type="submit">
+                                        Subscribe
+                                    </button>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Section -->
+            <div class="container-fluid bg-black py-5">
+                <div class="container">
+                    <div class="row text-center text-sm-start">
+
+                        <!-- Logo & About -->
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <a href="#">
+                                <img src="https://www.shutterstock.com/image-vector/festivasl-food-court-hall-logo-260nw-2233823755.jpg" height="50" alt="Logo">
+                            </a>
+                            <p class="text-danger mt-3">
+                                The most trusted FoodCourt<br>
+                                company in your area.
+                            </p>
+                        </div>
+
+                        <!-- Other Links -->
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <h5 class="text-light fw-bold mb-3">Other Links</h5>
+                            <ul class="list-unstyled">
+                                <li><a class="text-secondary text-decoration-none" href="gallery.html">Blogs</a></li>
+                                <li><a class="text-secondary text-decoration-none" href="#">Movers Website</a></li>
+                                <li><a class="text-secondary text-decoration-none" href="#">Traffic Update</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Services -->
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <h5 class="text-light fw-bold mb-3">Services</h5>
+                            <ul class="list-unstyled">
+                                <li><a class="text-secondary text-decoration-none" href="#">Corporate Goods</a></li>
+                                <li><a class="text-secondary text-decoration-none" href="#">Artworks</a></li>
+                                <li><a class="text-secondary text-decoration-none" href="#">Documents</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Customer Care -->
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <h5 class="text-light fw-bold mb-3">Customer Care</h5>
+                            <ul class="list-unstyled">
+                                <li><a class="text-secondary text-decoration-none" href="about.html">About Us</a></li>
+                                <li><a class="text-secondary text-decoration-none" href="contact.html">Contact Us</a></li>
+                                <li><a class="text-secondary text-decoration-none" href="home.html">Get Updates</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div
+                class="container col-6 my-1 p-2 border-rounded shadow"
+            >
+                <div
+                    class="row-cols- justify-content-center align-items-center g-2"
+                >
+                    <div
+                        class="table-responsive"
+                    >
+                        <table
+                            class="table table-secondary"
+                        >
+                            <thead>
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Book Tile</th>
+                                    <th scope="col">Author Name</th>
+                                    <th scope="col">Genre</th>
+                                    <th scope="col">Available Copies</th>
+                                    <th scope="col">Total Copies</th>
+                                    <th scope="col">Action</th>
+                                    <th scope="col">Action</th>  
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                    while($row = $result->fetch_assoc()){
+                                ?>
+                                <tr>
+                                    <td><?php echo $row["id"] ?></td>
+                                    <td><?php echo $row["title"] ?></td>
+                                    <td><?php echo $row["aname"] ?></td>
+                                    <td><?php echo $row["genre"] ?></td>
+                                    <td><?php echo $row["copies"] ?></td>
+                                    <td><?php echo $row["tcopies"] ?></td>
+                                    <td><a href="edit.php ?id=<?=$row["id"]?>">"Edit"</a></td>
+                                    <td><a href="delete.php ?id=<?=$row["id"]?>">"Delete"</a></td>
+                                </tr>
+                                <?php
+                                    }
+                                ?>    
+                            </tbody>
+                        </table>      
+                    </div>
+                </div>  
+            </div>
+        </main>
+
+        <footer class="text-center text-light">
+            <!-- place footer here -->
+            <h4 class="bg-primary">&copy; 2026. Food Court. All Rights Reserved by Ritesh Chaubey</h4>
+        </footer>
+
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html> 
